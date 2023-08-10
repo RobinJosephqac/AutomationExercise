@@ -1,0 +1,11 @@
+driver\example\Main.class
+pages\Cart.class
+pages\Signup.class
+pages\Page.class
+pages\ProductsPage.class
+pages\AccountCreated.class
+pages\LoginPage.class
+pages\DeleteAccount.class
+pages\HomePage.class
+driver\DriverManagerNonSingleton.class
+pages\ContactUs.class

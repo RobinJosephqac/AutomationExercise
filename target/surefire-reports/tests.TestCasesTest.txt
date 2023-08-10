@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: tests.TestCasesTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 20.985 s <<< FAILURE! - in tests.TestCasesTest
+goToTestCasesPageTest  Time elapsed: 0.735 s  <<< ERROR!
+org.openqa.selenium.StaleElementReferenceException: 
+stale element reference: stale element not found
+  (Session info: chrome=115.0.5790.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: '2195547027-PC', ip: '192.168.1.77', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [42e99f66aa5f8d7ce5c3bfd63990a0bd, clickElement {id=80EA628482E8FB54ED0D8BBD624B656F_element_121}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.102, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\raugustine\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:56300}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56300/devtoo..., se:cdpVersion: 115.0.5790.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (42e99f66aa5f8d7ce5c3bfd63990a0bd)] -> xpath: //header//a[@href='/test_cases']]
+Session ID: 42e99f66aa5f8d7ce5c3bfd63990a0bd
+	at tests.TestCasesTest.goToTestCasesPageTest(TestCasesTest.java:54)
+

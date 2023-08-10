@@ -1,0 +1,9 @@
+tests\LogoutTest.class
+tests\RegistrationTest.class
+tests\ContactUsTest.class
+properties\TestProperties.class
+tests\SubscriptionTest.class
+tests\TestCasesTest.class
+tests\LoginTest.class
+tests\SuperTest.class
+tests\ViewProductsTest.class

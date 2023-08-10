@@ -1,0 +1,57 @@
+-------------------------------------------------------------------------------
+Test set: tests.SubscriptionTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 36.6 s <<< FAILURE! - in tests.SubscriptionTest
+subscriptionInCartpage  Time elapsed: 0.821 s  <<< ERROR!
+org.openqa.selenium.StaleElementReferenceException: 
+stale element reference: stale element not found
+  (Session info: chrome=115.0.5790.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: '2195547027-PC', ip: '192.168.1.77', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9d97119f3e4ef1020a5f49601a8fa593, clickElement {id=80EA628482E8FB54ED0D8BBD624B656F_element_119}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.102, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\raugustine\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:56300}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56300/devtoo..., se:cdpVersion: 115.0.5790.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (9d97119f3e4ef1020a5f49601a8fa593)] -> xpath: //div[contains(@class,'shop')]//a[@href='/view_cart']]
+Session ID: 9d97119f3e4ef1020a5f49601a8fa593
+	at tests.SubscriptionTest.subscriptionInCartpage(SubscriptionTest.java:45)
+
+subscriptionInHomepage  Time elapsed: 2.852 s  <<< ERROR!
+org.openqa.selenium.StaleElementReferenceException: 
+stale element reference: stale element not found
+  (Session info: chrome=115.0.5790.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: '2195547027-PC', ip: '192.168.1.77', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d07c4e5231cd1321d166250123f8b3e9, sendKeysToElement {id=9FADA5EE2E6A29ED32649A68EA5BDC4B_element_149, value=[Ljava.lang.CharSequence;@5dfba9b0}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.102, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\raugustine\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:56483}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56483/devtoo..., se:cdpVersion: 115.0.5790.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (d07c4e5231cd1321d166250123f8b3e9)] -> xpath: //input[@id='susbscribe_email']]
+Session ID: d07c4e5231cd1321d166250123f8b3e9
+	at tests.SubscriptionTest.subscriptionInHomepage(SubscriptionTest.java:35)
+
+failRegistrationTest{String, String}[2]  Time elapsed: 2.852 s  <<< ERROR!
+org.openqa.selenium.StaleElementReferenceException: 
+stale element reference: stale element not found
+  (Session info: chrome=115.0.5790.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: '2195547027-PC', ip: '192.168.1.77', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [970150e8628db75a44899467f8355a86, clickElement {id=9FADA5EE2E6A29ED32649A68EA5BDC4B_element_72}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.102, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\raugustine\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:56483}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56483/devtoo..., se:cdpVersion: 115.0.5790.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (970150e8628db75a44899467f8355a86)] -> xpath: //a[contains(text(),' Signup')]]
+Session ID: 970150e8628db75a44899467f8355a86
+	at tests.RegistrationTest.failRegistrationTest(RegistrationTest.java:100)
+
+failingLoginTest{String, String}[1]  Time elapsed: 2.858 s  <<< ERROR!
+org.openqa.selenium.NoSuchSessionException: 
+invalid session id
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: '2195547027-PC', ip: '192.168.1.77', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5d121d60980d240668a618985a60481b, findElement {using=xpath, value=//input[contains(@data-qa,'login-email')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.102, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\raugustine\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:56483}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56483/devtoo..., se:cdpVersion: 115.0.5790.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5d121d60980d240668a618985a60481b
+	at tests.LoginTest.failingLoginTest(LoginTest.java:75)
+
