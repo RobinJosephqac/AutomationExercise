@@ -16,20 +16,11 @@ import java.time.Duration;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class ViewProductsTest{
-    DriverManagerNonSingleton driverManager;
-    WebDriver driver;
-    HomePage homePage;
-    ProductsPage productsPage;
+public class ViewProductsTest extends SuperTest{
+
     String product = "Blue Top" ;
 
-    public  ViewProductsTest() {
 
-        driverManager = new DriverManagerNonSingleton("chrome");
-        driver= driverManager.getDriver();
-        homePage = new HomePage(driver);
-        productsPage = new ProductsPage(driver);
-    }
 //
 //    @BeforeEach
 //    public void OpenURL() {
@@ -55,9 +46,9 @@ public class ViewProductsTest{
     @Description("User tries to go to Products page and view a product")
     public void goToProductsPageTest() throws InterruptedException{
 
-        homePage.selectProductsTab();
+        pages.getHomePage().selectProductsTab();
         assertEquals("Automation Exercise - All Products", driver.getTitle());
-        productsPage.selectAProductToView("Blue Top");
+        pages.getProductsPage().selectAProductToView("Blue Top");
     }
 
     @DisplayName("Go to Products Page and search for a product")
@@ -66,10 +57,10 @@ public class ViewProductsTest{
     @Description("User tries to go to Products page and search a product to view")
     public void goToProductsPageAndSearchForProductTest() throws InterruptedException{
 
-        homePage.selectProductsTab();
+        pages.getHomePage().selectProductsTab();
         assertEquals("Automation Exercise - All Products", driver.getTitle());
-        productsPage.selectAProductToSearchFor(product);
-        assertTrue(productsPage.onlySearchedProductIsDisplayed(product),"Invalid search results");
+        pages.getProductsPage().selectAProductToSearchFor(product);
+        assertTrue(pages.getProductsPage().onlySearchedProductIsDisplayed(product),"Invalid search results");
     }
 
 

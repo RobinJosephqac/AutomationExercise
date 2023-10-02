@@ -19,7 +19,7 @@ public class LoginPage extends Page{
 
         typeInput(SIGNUP_NAME,userName);
         typeInput(SIGNUP_EMAIL,email);
-//        clickElement(SIGNUP_BUTTON);
+       // clickElement(SIGNUP_BUTTON);
 
     }
     public void enterLoginDetails(String userEmail, String password){

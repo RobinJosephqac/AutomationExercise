@@ -1,5 +1,6 @@
 tests\LogoutTest.class
 tests\RegistrationTest.class
+tests\RegistrationTest02Testng.class
 tests\ContactUsTest.class
 properties\TestProperties.class
 tests\SubscriptionTest.class

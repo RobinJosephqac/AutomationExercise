@@ -7,5 +7,6 @@ pages\AccountCreated.class
 pages\LoginPage.class
 pages\DeleteAccount.class
 pages\HomePage.class
+pages\Manager\PageObjectManager.class
 driver\DriverManagerNonSingleton.class
 pages\ContactUs.class

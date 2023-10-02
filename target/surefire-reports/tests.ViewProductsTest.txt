@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: tests.ViewProductsTest
 -------------------------------------------------------------------------------
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.034 s - in tests.ViewProductsTest
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.001 s <<< FAILURE! - in tests.ViewProductsTest
+goToProductsPageAndSearchForProductTest  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "pages.Manager.PageObjectManager.getHomePage()" because "this.pages" is null
+	at tests.ViewProductsTest.goToProductsPageAndSearchForProductTest(ViewProductsTest.java:60)
+

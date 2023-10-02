@@ -8,16 +8,19 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.time.Duration;
 import java.util.ArrayList;
 
 
 public class DriverManagerNonSingleton {
-    private static WebDriver driver;
+    private WebDriver driver;
 
 
     public DriverManagerNonSingleton(String browserName) {
@@ -36,7 +39,7 @@ public class DriverManagerNonSingleton {
                 driver = new ChromeDriver(chromeOptions);
                 System.out.println(driver.getWindowHandles());
 
-                WebDriverWait wait =  new WebDriverWait(driver,Duration.ofSeconds(30));
+                WebDriverWait wait =  new WebDriverWait(driver,Duration.ofSeconds(60));
                 wait.until(ExpectedConditions.numberOfWindowsToBe(2));
                 System.out.println(driver.getWindowHandles());
                 ArrayList<String> handlesArray = new ArrayList<>(driver.getWindowHandles());
@@ -55,6 +58,20 @@ public class DriverManagerNonSingleton {
                 edgeOptions.addArguments("--start-maximized");
                 driver = new EdgeDriver(edgeOptions);
                 break;
+            case "remote":
+                ChromeOptions chromeOptions02 = new ChromeOptions();
+                chromeOptions02.addExtensions(new File("C:\\QAC\\SeleniumWebDriver_IntelliJDemo\\src\\main\\java\\driver\\adBlock\\gighmmpiobklfepjocnamgkkbiglidom-5.4.1-Crx4Chrome.com.crx"));
+
+
+                chromeOptions02.setBrowserVersion("114");
+
+                chromeOptions02.addArguments("--remote-allow-origins=*");
+                try {
+                    driver = new RemoteWebDriver(new URL("http://192.168.1.77:4444/"), chromeOptions02);
+                } catch (MalformedURLException e) {
+                    throw new RuntimeException(e);
+                }
+
 
         }
 

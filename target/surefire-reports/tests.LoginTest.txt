@@ -1,4 +1,28 @@
 -------------------------------------------------------------------------------
 Test set: tests.LoginTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 50.902 s - in tests.LoginTest
+Tests run: 6, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 0.021 s <<< FAILURE! - in tests.LoginTest
+successfulRegistrationTest  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "pages.Manager.PageObjectManager.getHomePage()" because "this.pages" is null
+	at tests.RegistrationTest.successfulRegistrationTest(RegistrationTest.java:53)
+
+failingLoginTest{String, String}[1]  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "pages.Manager.PageObjectManager.getHomePage()" because "this.pages" is null
+	at tests.LoginTest.failingLoginTest(LoginTest.java:85)
+
+subscriptionInCartpage  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "pages.Manager.PageObjectManager.getHomePage()" because "this.pages" is null
+	at tests.SubscriptionTest.subscriptionInCartpage(SubscriptionTest.java:56)
+
+failingLoginTest{String, String}[2]  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "pages.Manager.PageObjectManager.getHomePage()" because "this.pages" is null
+	at tests.LoginTest.failingLoginTest(LoginTest.java:85)
+
+failRegistrationTest{String, String}[1]  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "pages.Manager.PageObjectManager.getHomePage()" because "this.pages" is null
+	at tests.RegistrationTest.failRegistrationTest(RegistrationTest.java:78)
+
+failRegistrationTest{String, String}[2]  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "pages.Manager.PageObjectManager.getHomePage()" because "this.pages" is null
+	at tests.RegistrationTest.failRegistrationTest(RegistrationTest.java:78)
+

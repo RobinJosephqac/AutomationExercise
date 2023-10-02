@@ -14,17 +14,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 //@TestMethodOrder(MethodOrderer.DisplayName.class)
 
 @Feature("Subscription Features")
-public class SubscriptionTest{
+//@Tag("Parallel_Test")
+public class SubscriptionTest extends SuperTest{
 
-DriverManagerNonSingleton driverManagerNonSingleton;
-WebDriver driver;
-    HomePage homePage;
-    Cart cart;
+//DriverManagerNonSingleton driverManagerNonSingleton;
+//WebDriver driver;
+//    HomePage homePage;
+//    Cart cart;
 
-    public SubscriptionTest() {
-        homePage = new HomePage(driver);
-        cart = new Cart(driver);
-    }
+
+
+
 
     @DisplayName("Subscription Test @ homepage")
     @Test
@@ -32,9 +32,18 @@ WebDriver driver;
     @Description("Subscribe with email @ homepage")
 
     public void subscriptionInHomepage(){
-        homePage.verifySubscriptionTextExists();
-        homePage.enterSubscriptionEmail(TestProperties.VALID_LOGIN_EMAIL);
-        assertEquals(homePage.isSubscribed(), true);
+
+//        DriverManagerNonSingleton driverManager = new DriverManagerNonSingleton("chrome");
+//        WebDriver driver = driverManager.getDriver();
+//        HomePage homePage = new HomePage(driver);
+//
+//        OpenURL(driver);
+
+        pages.getHomePage().verifySubscriptionTextExists();
+        pages.getHomePage().enterSubscriptionEmail(TestProperties.VALID_LOGIN_EMAIL);
+        assertEquals(pages.getHomePage().isSubscribed(), true);
+
+        driverManager.quitDriver();
     }
 
     @DisplayName("Subscription Test @ cart page")
@@ -43,11 +52,15 @@ WebDriver driver;
     @Description("Subscribe with email @ cart page")
 
     public void subscriptionInCartpage(){
-        homePage.goToCartPage();
+
+
+        pages.getHomePage().goToCartPage();
         assertEquals("Automation Exercise - Checkout",driver.getTitle());
-        cart.verifySubscriptionTextExists();
-        cart.enterSubscriptionEmail(TestProperties.VALID_LOGIN_EMAIL);
-        assertEquals(cart.isSubscribed(), true);
+        pages.getCart().verifySubscriptionTextExists();
+        pages.getCart().enterSubscriptionEmail(TestProperties.VALID_LOGIN_EMAIL);
+        assertEquals(pages.getCart().isSubscribed(), true);
+
+        driverManager.quitDriver();
     }
 
 }

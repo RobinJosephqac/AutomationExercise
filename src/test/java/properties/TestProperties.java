@@ -9,5 +9,5 @@ public class TestProperties {
     public static final String VALID_PASSWORD = "123456";
     public static final String INVALID_PASSWORD = "12345";
     public static final String VALID_LOGIN_EMAIL = "123@qac.com";
-    public static final String BROWSER = "chrome";
+    public static final String BROWSER = "remote"; // 'chrome', 'edge','remote'
 }
